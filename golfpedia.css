@@ -150,3 +150,14 @@ a{color:inherit;text-decoration:none;}
 
 @media(max-width:900px){.pillars,.index2{grid-template-columns:1fr;}}
 @media(max-width:600px){.searchbar{flex-direction:column;}.searchbar button{width:100%;}.sec-head{flex-direction:column;align-items:flex-start;gap:8px;}.shopband{padding:28px 24px;}.section{padding:48px 22px;}}
+
+/* ===== SLOT PUBBLICITARI / AFFILIAZIONE (aggiunto) ===== */
+.adbox{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:130px;margin:1.9rem 0;padding:22px;border:1px dashed var(--green-line);border-radius:14px;background:var(--green-soft);text-align:center;color:var(--ink-soft);}
+.adbox .lab{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-deep);}
+.adbox .hint{font-size:13.5px;}
+.adbox.tall{min-height:250px;}
+
+/* ===== RICERCA GLOSSARIO (aggiunto) ===== */
+.gloss-search{position:sticky;top:112px;z-index:5;margin:0 0 1.6rem;background:var(--paper);padding:8px 0;}
+.gloss-search input{width:100%;height:52px;border:1px solid var(--line);border-radius:12px;padding:0 18px;font:inherit;font-size:16px;color:var(--ink);background:#fff;}
+.gloss-search input:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px var(--green-soft);}
