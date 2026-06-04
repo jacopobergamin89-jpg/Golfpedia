@@ -109,7 +109,7 @@ a{color:inherit;text-decoration:none;}
     <a class="brand" href="index.html"><span class="brand-mark"></span><span class="nm">Golfpedia<b>.</b></span></a>
     <a class="cerca" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span>Cerca un campo</span></a>
   </div></div>
-  <nav class="bar-sec"><div class="row"><a href="index.html">Campi</a><a href="storia.html">Storia</a><a href="glossario.html" class="active">Glossario</a><a href="personaggi.html">Top 50</a><a href="attrezzatura.html">Attrezzatura</a><a href="handicap.html">Handicap</a><a href="tornei.html">Tornei</a><a href="#" class="shop">Shop</a></div></nav>
+  <nav class="bar-sec"><div class="row"><a href="index.html">Campi</a><a href="storia.html">Storia</a><a href="glossario.html" class="active">Glossario</a><a href="personaggi.html">Top 50</a><a href="attrezzatura.html">Attrezzatura</a><a href="campo.html">Il campo</a><a href="handicap.html">Handicap</a><a href="tornei.html">Tornei</a><a href="viaggi.html">Viaggi</a><a href="#" class="shop">Shop</a></div></nav>
 </header>
 <main>
   <header class="art-hero"><div class="row">
@@ -123,6 +123,10 @@ a{color:inherit;text-decoration:none;}
 </blockquote>
 <p>Il golf ha un vocabolario tutto suo, in gran parte di origine inglese, che mescola termini tecnici, formule di gara e modi di dire. Questa raccolta riunisce i termini più usati sul campo e nel gioco professionistico, con la corrispondenza inglese dove utile. I rimandi (→) collegano i sinonimi e i termini correlati.</p>
 <hr />
+<div class="gloss-search">
+  <input id="gloss-q" type="search" placeholder="Cerca un termine… (es. birdie, slice, bunker)" autocomplete="off" aria-label="Cerca nel glossario">
+</div>
+<p id="gloss-empty" style="display:none;color:var(--ink-soft);">Nessun termine trovato. Prova con un'altra parola.</p>
 <h2>A</h2>
 <p><strong>Ace</strong> → <em>vedi</em> hole in one. Buca chiusa con un solo colpo.</p>
 <p><strong>Address</strong> — Posizione assunta dal giocatore davanti alla palla immediatamente prima di colpirla. Da qui i verbi colloquiali &ldquo;prendere l&rsquo;address&rdquo; o &ldquo;addressarsi&rdquo;.</p>
@@ -398,9 +402,36 @@ a{color:inherit;text-decoration:none;}
   <p>L'enciclopedia del golf: i campi italiani buca per buca, più storia, glossario, giocatori, attrezzatura, handicap e tornei.</p>
   <p class="indip">Progetto editoriale indipendente. Non affiliato ad alcuna federazione, circolo o ad altre enciclopedie online.</p>
   <div class="links">
-    <a href="index.html">Home</a><a href="storia.html">Storia</a><a href="glossario.html">Glossario</a><a href="personaggi.html">Top 50 giocatori</a><a href="attrezzatura.html">Attrezzatura</a><a href="handicap.html">Handicap</a><a href="tornei.html">Campionati e tornei</a><a href="#">Privacy</a><a href="#">Cookie</a>
+    <a href="index.html">Home</a><a href="storia.html">Storia</a><a href="glossario.html">Glossario</a><a href="personaggi.html">Top 50 giocatori</a><a href="attrezzatura.html">Attrezzatura</a><a href="campo.html">Il campo</a><a href="handicap.html">Handicap</a><a href="tornei.html">Campionati e tornei</a><a href="viaggi.html">Viaggi</a><a href="#">Privacy</a><a href="#">Cookie</a>
   </div>
   <div class="cr">© Golfpedia · golfpedia.it</div>
 </div></footer>
+<script>
+(function(){
+  var prose=document.querySelector('.prose'),box=document.getElementById('gloss-q');
+  if(!prose||!box)return;
+  var kids=Array.prototype.slice.call(prose.children);
+  function isTerm(el){return el.tagName==='P'&&el.querySelector('strong');}
+  function run(){
+    var q=(box.value||'').trim().toLowerCase(),groups=[],cur=null,any=false;
+    kids.forEach(function(el){
+      if(el.tagName==='H2'){cur={h2:el,terms:[]};groups.push(cur);}
+      else if(cur&&isTerm(el)){cur.terms.push(el);}
+    });
+    groups.forEach(function(g){
+      var shown=0;
+      g.terms.forEach(function(t){
+        var hit=!q||t.textContent.toLowerCase().indexOf(q)>-1;
+        t.style.display=hit?'':'none';
+        if(hit){shown++;any=true;}
+      });
+      g.h2.style.display=shown?'':'none';
+    });
+    var e=document.getElementById('gloss-empty');
+    if(e)e.style.display=(q&&!any)?'':'none';
+  }
+  box.addEventListener('input',run);
+})();
+</script>
 </body>
 </html>
