@@ -174,3 +174,7 @@ a{color:inherit;text-decoration:none;}
 .prod p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.5;flex:1;}
 .prod .buy{margin-top:14px;display:block;text-align:center;background:var(--green);color:#fff;font-weight:700;font-size:14px;padding:11px 14px;border-radius:10px;}
 .prod .buy:hover{background:var(--green-deep);}
+
+/* prezzo nelle schede prodotto (shop prodotti propri) */
+.prod .price{font-family:var(--mono);font-size:16px;color:var(--green-deep);margin-top:12px;font-weight:600;}
+.prod .price s{color:var(--ink-soft);font-weight:400;font-size:13px;margin-right:6px;}
