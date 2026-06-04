@@ -19,7 +19,7 @@ a{color:inherit;text-decoration:none;}
 .bar-top{background:rgba(255,255,255,.92);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line);}
 .bar-top .row{max-width:1120px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;}
 .brand{display:inline-flex;align-items:center;gap:10px;}
-.brand-mark{width:42px;height:42px;flex:none;background:center/contain no-repeat url(golfpedia-logo.png);}
+.brand-mark{width:42px;height:42px;flex:none;background:center/contain no-repeat url(img/golfpedia-logo.png);}
 .brand .nm{font-family:var(--serif);font-weight:800;font-size:22px;letter-spacing:-.01em;color:var(--ink);}
 .brand .nm b{color:var(--red);}
 .cerca{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:13.5px;color:var(--ink-soft);}
