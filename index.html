@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golfpedia · L'enciclopedia del golf italiano</title>
+<meta name="description" content="Golfpedia: l'enciclopedia del golf. I campi italiani raccontati buca per buca, più storia, glossario, top 50 giocatori, mazze, palline, handicap, campionati e tornei.">
+<meta property="og:title" content="Golfpedia · L'enciclopedia del golf italiano">
+<meta property="og:description" content="I campi italiani raccontati buca per buca, più storia, glossario, giocatori, attrezzatura, handicap e tornei.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M9.8%203.5%20A8.5%208.5%200%200%200%209.8%2020.5%20Z'%20fill='%2316a34a'/%3E%3Cpath%20d='M14.2%203.5%20A8.5%208.5%200%200%201%2014.2%2020.5%20Z'%20fill='%23e0232b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="golfpedia.css">
+</head>
+<body>
+<div class="tricolore"><i></i><i></i><i></i></div>
+
+<header class="site">
+  <div class="bar-top"><div class="row">
+    <a class="brand" href="index.html"><span class="brand-mark"></span><span class="nm">Golfpedia<b>.</b></span></a>
+    <a class="cerca" href="#cerca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span>Cerca un campo</span></a>
+  </div></div>
+  <nav class="bar-sec"><div class="row"><a href="index.html" class="active">Campi</a><a href="storia.html">Storia</a><a href="glossario.html">Glossario</a><a href="personaggi.html">Top 50</a><a href="attrezzatura.html">Attrezzatura</a><a href="handicap.html">Handicap</a><a href="tornei.html">Tornei</a><a href="#" class="shop">Shop</a></div></nav>
+</header>
+
+<section class="hp-hero">
+  <span class="sc sc-deco" style="--s:300px" aria-hidden="true"><i class="l"></i><i class="r"></i></span>
+  <div class="row">
+    <span class="eyebrow"><span class="sc" style="--s:14px"><i class="l"></i><i class="r"></i></span> L'enciclopedia del golf italiano</span>
+    <h1>I campi d'Italia,<br>raccontati <em>buca</em> <span class="r">per buca</span>.</h1>
+    <p class="lead">Trova un campo e scopri il percorso buca dopo buca: par, distanze e caratteristiche. E tutto il resto del golf, sezione per sezione.</p>
+    <form class="searchbar" id="cerca" role="search">
+      <div class="f"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><input id="q" type="text" placeholder="Cerca un campo — es. Marco Simone, Toscana…" autocomplete="off" aria-label="Cerca un campo"></div>
+      <button type="submit">Cerca</button>
+    </form>
+    <div class="trust">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="4 12 10 18 20 6"/></svg> Schede buca per buca</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="4 12 10 18 20 6"/></svg> Dati verificati</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><polyline points="4 12 10 18 20 6"/></svg> Guida indipendente</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="campi">
+  <div class="sec-head">
+    <div><div class="k"><span class="sc" style="--s:13px"><i class="l"></i><i class="r"></i></span> Campi italiani</div><h2>I campi d'Italia, buca per buca</h2></div>
+    <a class="more" href="#">Tutti i campi →</a>
+  </div>
+  <div class="pillars">
+    <a class="pill" href="#"><span class="k">Italia</span><h3>Cenni storici</h3><p>Il golf in Italia dai primi circoli alla Federazione del 1927, fino a oggi.</p><span class="go">Leggi →</span></a>
+    <a class="pill" href="#"><span class="k">Classifica</span><h3>I migliori campi</h3><p>I percorsi italiani da non perdere, regione per regione.</p><span class="go">Scopri →</span></a>
+    <a class="pill" href="#"><span class="k">Eventi</span><h3>Le grandi gare in Italia</h3><p>Dall'Open d'Italia alla Ryder Cup 2023 di Marco Simone.</p><span class="go">Vai →</span></a>
+  </div>
+  <div class="cards" id="campi-grid">
+    <a class="cc" href="#" data-search="villa d'este villa deste lombardia montorfano como"><span class="rg">Lombardia</span><h3>Villa d'Este</h3><span class="s">18 buche · Par 69 · Montorfano (CO)</span><span class="b"><svg viewBox="0 0 24 24" fill="none"><line x1="6" y1="3" x2="6" y2="21" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/><path d="M6 4 L16 6.2 L6 8.4 Z" fill="#e0232b"/></svg> Scorecard buca per buca</span></a>
+    <a class="cc" href="#" data-search="marco simone lazio guidonia roma ryder cup"><span class="rg">Lazio</span><h3>Marco Simone</h3><span class="s">18 buche · Par 72 · Ryder Cup 2023</span><span class="b"><svg viewBox="0 0 24 24" fill="none"><line x1="6" y1="3" x2="6" y2="21" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/><path d="M6 4 L16 6.2 L6 8.4 Z" fill="#e0232b"/></svg> Scorecard buca per buca</span></a>
+    <a class="cc" href="#" data-search="royal park i roveri piemonte torino fiano"><span class="rg">Piemonte</span><h3>Royal Park I Roveri</h3><span class="s">27 buche · Par 72 · Fiano (TO)</span><span class="b"><svg viewBox="0 0 24 24" fill="none"><line x1="6" y1="3" x2="6" y2="21" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/><path d="M6 4 L16 6.2 L6 8.4 Z" fill="#e0232b"/></svg> Scorecard buca per buca</span></a>
+    <a class="cc" href="#" data-search="circolo golf bogogno piemonte novara"><span class="rg">Piemonte</span><h3>Circolo Golf Bogogno</h3><span class="s">36 buche · 2 percorsi · Bogogno (NO)</span><span class="b"><svg viewBox="0 0 24 24" fill="none"><line x1="6" y1="3" x2="6" y2="21" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/><path d="M6 4 L16 6.2 L6 8.4 Z" fill="#e0232b"/></svg> Scorecard buca per buca</span></a>
+    <a class="cc" href="#" data-search="argentario golf toscana monte argentario porto ercole"><span class="rg">Toscana</span><h3>Argentario Golf</h3><span class="s">18 buche · Par 71 · Monte Argentario (GR)</span><span class="b"><svg viewBox="0 0 24 24" fill="none"><line x1="6" y1="3" x2="6" y2="21" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/><path d="M6 4 L16 6.2 L6 8.4 Z" fill="#e0232b"/></svg> Scorecard buca per buca</span></a>
+    <a class="cc" href="#" data-search="castelconturbia piemonte agrate conturbia novara"><span class="rg">Piemonte</span><h3>Castelconturbia</h3><span class="s">27 buche · Par 72 · Agrate Conturbia (NO)</span><span class="b"><svg viewBox="0 0 24 24" fill="none"><line x1="6" y1="3" x2="6" y2="21" stroke="#16a34a" stroke-width="2" stroke-linecap="round"/><path d="M6 4 L16 6.2 L6 8.4 Z" fill="#e0232b"/></svg> Scorecard buca per buca</span></a>
+  </div>
+  <div id="empty" style="display:none;margin-top:8px;color:var(--ink-soft);">Nessun campo trovato. Prova con un nome o una regione.</div>
+  <p class="note">I campi qui sopra sono schede di esempio: le pagine dei campi arrivano a breve.</p>
+</section>
+
+<div class="band"><section class="section">
+  <div class="sec-head">
+    <div><div class="k"><span class="sc" style="--s:13px"><i class="l"></i><i class="r"></i></span> Esplora l'enciclopedia</div><h2>Tutto il golf, sezione per sezione</h2></div>
+  </div>
+  <div class="index2">
+    <a class="catrow" href="storia.html"><span class="n">01</span><span><h3>Storia</h3><p>Dalle origini scozzesi del Quattrocento al golf moderno.</p></span><span class="ar">→</span></a>
+    <a class="catrow" href="glossario.html"><span class="n">02</span><span><h3>Glossario</h3><p>I termini del golf, dalla A alla Z, spiegati con chiarezza.</p></span><span class="ar">→</span></a>
+    <a class="catrow" href="personaggi.html"><span class="n">03</span><span><h3>Top 50 giocatori</h3><p>I personaggi che hanno fatto la storia del golf.</p></span><span class="ar">→</span></a>
+    <a class="catrow" href="attrezzatura.html"><span class="n">04</span><span><h3>Attrezzatura</h3><p>Mazze, palline, carrelli e gli oggetti del campo.</p></span><span class="ar">→</span></a>
+    <a class="catrow" href="handicap.html"><span class="n">05</span><span><h3>Handicap</h3><p>Il World Handicap System: cos'è e come si calcola l'indice.</p></span><span class="ar">→</span></a>
+    <a class="catrow" href="tornei.html"><span class="n">06</span><span><h3>Campionati e tornei</h3><p>I quattro Major, la Ryder Cup e i tornei italiani ed europei.</p></span><span class="ar">→</span></a>
+  </div>
+</section></div>
+
+<section class="section">
+  <div class="shopband">
+    <div><div class="k">Lo shop</div><h2>Mazze, palline e accessori selezionati</h2><p>Una vetrina curata per chi gioca: dalle prime mazze al regalo giusto per un golfista.</p></div>
+    <a class="cta" href="#">Vai allo shop →</a>
+  </div>
+  <p class="note">La pagina shop (in affiliazione) arriva a breve.</p>
+</section>
+
+<footer class="site-foot"><div class="row">
+  <a class="brand" href="index.html"><span class="nm">Golfpedia<b>.</b></span></a>
+  <p>L'enciclopedia del golf: i campi italiani buca per buca, più storia, glossario, giocatori, attrezzatura, handicap e tornei.</p>
+  <p class="indip">Progetto editoriale indipendente. Non affiliato ad alcuna federazione, circolo o ad altre enciclopedie online.</p>
+  <div class="links">
+    <a href="index.html">Home</a><a href="storia.html">Storia</a><a href="glossario.html">Glossario</a><a href="personaggi.html">Top 50 giocatori</a><a href="attrezzatura.html">Attrezzatura</a><a href="handicap.html">Handicap</a><a href="tornei.html">Campionati e tornei</a><a href="#">Privacy</a><a href="#">Cookie</a>
+  </div>
+  <div class="cr">© Golfpedia · golfpedia.it</div>
+</div></footer>
+
+<script>
+  var form = document.getElementById('cerca'),
+      input = document.getElementById('q'),
+      cards = Array.prototype.slice.call(document.querySelectorAll('#campi-grid .cc')),
+      empty = document.getElementById('empty');
+  function runFilter(){
+    var v = (input.value || '').trim().toLowerCase(), shown = 0;
+    cards.forEach(function(c){
+      var hit = !v || (c.getAttribute('data-search') || '').indexOf(v) > -1;
+      c.style.display = hit ? '' : 'none';
+      if(hit) shown++;
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  }
+  input && input.addEventListener('input', runFilter);
+  form && form.addEventListener('submit', function(e){ e.preventDefault(); runFilter(); document.getElementById('campi').scrollIntoView({behavior:'smooth'}); });
+</script>
+</body>
+</html>
