@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tutti i campi da golf d'Italia · Golfpedia</title>
+<meta name="description" content="L'elenco dei campi da golf in Italia con filtro per numero di buche: campo pratica, 9, 18, 27 e 36 buche e oltre. Regione per regione.">
+<meta property="og:title" content="Tutti i campi da golf d'Italia · Golfpedia">
+<meta property="og:description" content="L'elenco dei campi da golf italiani con filtro per numero di buche.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" type="image/png" href="img/golfpedia-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="golfpedia.css?v=3">
+<style>
+.filterbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;}
+.filterbar button{font:inherit;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;}
+.filterbar button.active{background:var(--green);color:#fff;border-color:var(--green);}
+.campi-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;}
+.cg{display:block;border:1px solid var(--line);border-radius:14px;padding:14px 16px;}
+.cg .rg{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--green-deep);}
+.cg h3{font-family:var(--serif);font-weight:700;font-size:18px;margin:4px 0 2px;line-height:1.15;}
+.cg .s{font-size:13px;color:var(--ink-soft);display:block;}
+.cg.has-scheda{transition:border-color .15s,background .15s;}
+.cg.has-scheda:hover{border-color:var(--green-line);background:var(--green-soft);}
+.cg .tag{display:inline-block;margin-top:8px;font-size:12px;font-weight:600;color:var(--green-deep);}
+#empty-cat{display:none;color:var(--ink-soft);margin-top:14px;}
+</style>
+</head>
+<body>
+<div class="tricolore"><i></i><i></i><i></i></div>
+<header class="site">
+  <div class="bar-top"><div class="row">
+    <a class="brand" href="index.html"><img class="brand-logo" src="img/golfpedia-titolo.png" alt="Golfpedia"></a>
+    <a class="cerca" href="index.html#cerca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg><span>Cerca un campo</span></a>
+  </div></div>
+  <nav class="bar-sec"><div class="row"><a href="index.html" class="active">Campi</a><a href="storia.html">Storia</a><a href="glossario.html">Glossario</a><a href="personaggi.html">Top 50</a><a href="attrezzatura.html">Attrezzatura</a><a href="campo.html">Il campo</a><a href="handicap.html">Handicap</a><a href="tornei.html">Tornei</a><a href="viaggi.html">Viaggi</a><a href="shop.html" class="shop">Shop</a></div></nav>
+</header>
+<header class="art-hero"><div class="row">
+  <span class="sc sc-deco" style="--s:230px" aria-hidden="true"><i class="l"></i><i class="r"></i></span>
+  <span class="eyebrow"><span class="sc" style="--s:14px"><i class="l"></i><i class="r"></i></span> Campi</span>
+  <h1>Tutti i campi d'Italia</h1>
+  <div style="color:var(--ink-soft);font-size:16px;margin-top:8px;">Filtra per numero di buche. L'elenco è in continua espansione: le schede buca per buca arrivano a mano a mano.</div>
+</div></header>
+<section class="section">
+  <div class="filterbar">
+    <button data-cat="tutti" class="active">Tutti</button>
+    <button data-cat="pratica">Campo pratica</button>
+    <button data-cat="9">9 buche</button>
+    <button data-cat="18">18 buche</button>
+    <button data-cat="27">27 buche</button>
+    <button data-cat="36">36 e oltre</button>
+  </div>
+  <div class="campi-list" id="campi-list">
+      <div class="cg" data-cat="27"><span class="rg">Emilia-Romagna</span><h3>Adriatic Golf Club Cervia</h3><span class="s">27 buche · Cervia (RA)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Emilia-Romagna</span><h3>Golf Bacedasco</h3><span class="s">18 buche · Castell'Arquato (PC)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Emilia-Romagna</span><h3>Golf Club Bologna</h3><span class="s">18 buche · Monte San Pietro (BO)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Emilia-Romagna</span><h3>Golf Club Le Fonti</h3><span class="s">18 buche · Castel San Pietro Terme (BO)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Emilia-Romagna</span><h3>Modena Golf & Country Club</h3><span class="s">18 buche · Formigine (MO)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Lazio</span><h3>Circolo Golf Roma Acquasanta</h3><span class="s">18 buche · Roma</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Lazio</span><h3>Country Club Castel Gandolfo</h3><span class="s">18 buche · Castel Gandolfo (RM)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Lazio</span><h3>Golf Le Querce</h3><span class="s">18 buche · Sutri (VT)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Lazio</span><h3>Marco Simone Golf & CC</h3><span class="s">18 buche · Guidonia Montecelio (RM)</span></div>
+      <div class="cg" data-cat="27"><span class="rg">Lazio</span><h3>Olgiata Golf Club</h3><span class="s">27 buche · Roma</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Lazio</span><h3>Parco de' Medici Golf Club</h3><span class="s">18 buche · Roma</span></div>
+      <a class="cg has-scheda" data-cat="18" href="campi/barlassina.html"><span class="rg">Lombardia</span><h3>Barlassina Country Club</h3><span class="s">18 buche · Lentate sul Seveso (MB)</span><span class="tag">Scheda buca per buca →</span></a>
+      <div class="cg" data-cat="27"><span class="rg">Lombardia</span><h3>Chervò Golf San Vigilio</h3><span class="s">27 buche · Pozzolengo (BS)</span></div>
+      <div class="cg" data-cat="27"><span class="rg">Lombardia</span><h3>Franciacorta Golf Club</h3><span class="s">27 buche · Corte Franca (BS)</span></div>
+      <div class="cg" data-cat="27"><span class="rg">Lombardia</span><h3>Gardagolf Country Club</h3><span class="s">27 buche · Soiano del Lago (BS)</span></div>
+      <div class="cg" data-cat="27"><span class="rg">Lombardia</span><h3>Golf Club Bergamo L'Albenza</h3><span class="s">27 buche · Almenno San Bartolomeo (BG)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Lombardia</span><h3>Golf Club Carimate</h3><span class="s">18 buche · Carimate (CO)</span></div>
+      <a class="cg has-scheda" data-cat="18" href="campi/le-robinie.html"><span class="rg">Lombardia</span><h3>Golf Club Le Robinie</h3><span class="s">18 buche · Solbiate Olona (VA)</span><span class="tag">Scheda buca per buca →</span></a>
+      <div class="cg" data-cat="18"><span class="rg">Lombardia</span><h3>Golf Club Le Rovedine</h3><span class="s">18 buche · Opera (MI)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Lombardia</span><h3>Golf Club Lecco</h3><span class="s">18 buche · Annone Brianza (LC)</span></div>
+      <div class="cg" data-cat="36"><span class="rg">Lombardia</span><h3>Golf Club Milano</h3><span class="s">36 buche e oltre · Parco di Monza (MB)</span></div>
+      <div class="cg" data-cat="36"><span class="rg">Lombardia</span><h3>Golf Club Monticello</h3><span class="s">36 buche e oltre · Cassina Rizzardi (CO)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Lombardia</span><h3>Golf Club Varese</h3><span class="s">18 buche · Luvinate (VA)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Lombardia</span><h3>Golf Club Villa Paradiso</h3><span class="s">18 buche · Cornate d'Adda (MB)</span></div>
+      <a class="cg has-scheda" data-cat="18" href="campi/la-pinetina.html"><span class="rg">Lombardia</span><h3>La Pinetina Golf Club</h3><span class="s">18 buche · Appiano Gentile (CO)</span><span class="tag">Scheda buca per buca →</span></a>
+      <div class="cg" data-cat="18"><span class="rg">Lombardia</span><h3>Molinetto Country Club</h3><span class="s">18 buche · Cernusco sul Naviglio (MI)</span></div>
+      <a class="cg has-scheda" data-cat="18" href="campi/villa-deste.html"><span class="rg">Lombardia</span><h3>Villa d'Este</h3><span class="s">18 buche · Montorfano (CO)</span><span class="tag">Scheda buca per buca →</span></a>
+      <div class="cg" data-cat="27"><span class="rg">Piemonte</span><h3>Castelconturbia</h3><span class="s">27 buche · Agrate Conturbia (NO)</span></div>
+      <div class="cg" data-cat="36"><span class="rg">Piemonte</span><h3>Circolo Golf Bogogno</h3><span class="s">36 buche e oltre · Bogogno (NO)</span></div>
+      <div class="cg" data-cat="36"><span class="rg">Piemonte</span><h3>Circolo Golf Torino - La Mandria</h3><span class="s">36 buche e oltre · Fiano (TO)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Piemonte</span><h3>Golf Club Cherasco</h3><span class="s">18 buche · Cherasco (CN)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Piemonte</span><h3>Golf Club Colline del Gavi</h3><span class="s">18 buche · Tassarolo (AL)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Piemonte</span><h3>Golf Club Le Betulle</h3><span class="s">18 buche · Magnano / Biella (BI)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Piemonte</span><h3>Golf Club Margara</h3><span class="s">18 buche · Fubine (AL)</span></div>
+      <div class="cg" data-cat="36"><span class="rg">Piemonte</span><h3>Golf Club Villa Carolina</h3><span class="s">36 buche e oltre · Capriata d'Orba (AL)</span></div>
+      <div class="cg" data-cat="27"><span class="rg">Piemonte</span><h3>Royal Park I Roveri</h3><span class="s">27 buche · Fiano (TO)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Toscana</span><h3>Argentario Golf</h3><span class="s">18 buche · Monte Argentario (GR)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Toscana</span><h3>Circolo del Golf Ugolino</h3><span class="s">18 buche · Impruneta (FI)</span></div>
+      <div class="cg" data-cat="27"><span class="rg">Toscana</span><h3>Golf Club Castelfalfi</h3><span class="s">27 buche · Montaione (FI)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Toscana</span><h3>Golf Club Punta Ala</h3><span class="s">18 buche · Punta Ala (GR)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Toscana</span><h3>Royal Golf La Bagnaia</h3><span class="s">18 buche · Bagnaia / Siena (SI)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Trentino-A.A.</span><h3>Dolomiti Golf Club</h3><span class="s">18 buche · Sarnonico (TN)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Trentino-A.A.</span><h3>Golf Club Petersberg</h3><span class="s">18 buche · Nova Ponente (BZ)</span></div>
+      <div class="cg" data-cat="27"><span class="rg">Veneto</span><h3>Asolo Golf Club</h3><span class="s">27 buche · Cavaso del Tomba (TV)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Veneto</span><h3>Circolo Golf Venezia</h3><span class="s">18 buche · Lido di Venezia (VE)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Veneto</span><h3>Golf Ca' della Nave</h3><span class="s">18 buche · Martellago (VE)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Veneto</span><h3>Golf Club Colli Berici</h3><span class="s">18 buche · Brendola (VI)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Veneto</span><h3>Golf Club Verona</h3><span class="s">18 buche · Sommacampagna (VR)</span></div>
+      <div class="cg" data-cat="27"><span class="rg">Veneto</span><h3>Golf della Montecchia</h3><span class="s">27 buche · Selvazzano Dentro (PD)</span></div>
+      <div class="cg" data-cat="18"><span class="rg">Veneto</span><h3>Villa Condulmer Golf Club</h3><span class="s">18 buche · Mogliano Veneto (TV)</span></div>
+  </div>
+  <div id="empty-cat">Per questa categoria non ci sono ancora campi in elenco — li aggiungiamo a breve.</div>
+  <p class="note" style="margin-top:18px;color:var(--ink-soft);">Le categorie sono per numero totale di buche dell'impianto. Solo i campi con la dicitura "Scheda buca per buca" hanno già una pagina dedicata; gli altri sono in arrivo.</p>
+</section>
+<footer class="site-foot"><div class="row">
+  <a class="brand" href="index.html"><span class="nm">Golfpedia<b>.</b></span></a>
+  <p>L'enciclopedia del golf: i campi italiani buca per buca, più storia, glossario, giocatori, attrezzatura, handicap e tornei.</p>
+  <p class="indip">Progetto editoriale indipendente. Non affiliato ad alcuna federazione, circolo o ad altre enciclopedie online.</p>
+  <div class="links">
+    <a href="index.html">Home</a><a href="storia.html">Storia</a><a href="glossario.html">Glossario</a><a href="personaggi.html">Top 50 giocatori</a><a href="attrezzatura.html">Attrezzatura</a><a href="campo.html">Il campo</a><a href="handicap.html">Handicap</a><a href="tornei.html">Campionati e tornei</a><a href="viaggi.html">Viaggi</a><a href="mappa.html">Mappa</a><a href="privacy.html">Privacy</a><a href="cookie.html">Cookie</a>
+  </div>
+  <div class="cr">© Golfpedia · golfpedia.it</div>
+</div></footer>
+<script>
+  var btns=[].slice.call(document.querySelectorAll('.filterbar button'));
+  var cards=[].slice.call(document.querySelectorAll('#campi-list .cg'));
+  function flt(cat){
+    btns.forEach(function(b){b.classList.toggle('active',b.getAttribute('data-cat')===cat);});
+    var shown=0;
+    cards.forEach(function(c){var ok=(cat==='tutti'||c.getAttribute('data-cat')===cat);c.style.display=ok?'':'none';if(ok)shown++;});
+    document.getElementById('empty-cat').style.display=shown?'none':'block';
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){flt(b.getAttribute('data-cat'));});});
+</script>
+</body>
+</html>
